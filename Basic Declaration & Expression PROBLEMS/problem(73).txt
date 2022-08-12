@@ -1,0 +1,28 @@
+| PROBLEM | :
+
+Write a C program that reads in two integers and check whether the first integer is a multiple of the second integer. 
+Sample Input: 9 3
+Sample Output:
+Input the first integer : Input the second integer:
+9 is a multiple of 3.
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:47
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int x,y;
+    printf("Input the first integer : ");scanf("%d",&x);
+    printf("Input the second integer : ");scanf("%d",&y);
+    if(x%y==0)
+        printf("%d is a multiple of %d.",x,y);
+
+}

@@ -1,0 +1,32 @@
+| PROBLEM | :
+
+Write a C program to compute the perimeter and area of a rectangle with a height of 7 inches.
+and width of 5 inches. 
+Expected Output:
+Perimeter of the rectangle = 24 inches
+Area of the rectangle = 35 square inches
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:01
+
+ Did i checked the question answer? = NO 
+
+
+
+| MY ANSWER (Source code) | : 
+
+
+#include <stdio.h>
+int main(){
+
+int perimeter,area;
+
+perimeter = 7*2+5*2;
+area = 7*5;
+
+printf("Perimeter of the rectangle = %d inches\n",perimeter);
+printf("Area of the rectangle = %d inches",area);
+
+
+}

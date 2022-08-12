@@ -1,0 +1,37 @@
+| PROBLEM | :
+
+Write a C program to find the length of a string without using the library function. 
+Test Data :
+Input a string : welcome
+Expected Output :
+The string contains 7 number of characters.
+So, the length of the string welcome is : 7
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:19
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+
+int main(){ int count=0;
+    char a[100];
+        printf("Input a string : ");scanf("%s",a);
+    for(int i = 0 ; i < 100 ; i++)
+        if(a[i]=='\0')
+            break;
+        else
+            count++;
+
+ printf("The string contains %d number of characters.\n",count);
+ printf("So, the length of the string '%s' is %d",a,count);
+
+
+}

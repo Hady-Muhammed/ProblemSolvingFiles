@@ -1,0 +1,27 @@
+| PROBLEM | :
+
+Write a C program to remove any negative sign in front of a number. 
+Input a value (negative):
+Original value = -253
+Absolute value = 253
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:00
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x,y;
+           
+    printf("Input a value(negative): ");scanf("%d",&x);
+    printf("\nOriginal value: %d",x);
+    y = abs(x);
+    printf("\nAbsolute value: %d",y);
+
+}

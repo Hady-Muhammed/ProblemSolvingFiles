@@ -1,0 +1,45 @@
+| PROBLEM | :
+Write a C program that accepts three integers and find the maximum of three. 
+Test Data :
+Input the first integer: 25
+Input the second integer: 35
+Input the third integer: 15
+Expected Output:
+Maximum value of three integers: 35
+ 
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:25
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+
+int main(){
+    int array[3];
+
+    printf("Input the first integer:");scanf("%d",&array[0]);
+    printf("Input the Second integer:");scanf("%d",&array[1]);
+    printf("Input the Third integer:");scanf("%d",&array[2]);
+
+    if(array[0] > array[1] && array[0] > array[2])
+        printf("Maximum value of three integers : %d",array[0]);
+    else if(array[1] > array[0] && array[1] > array[2])
+        printf("Maximum value of three integers : %d",array[1]);
+    else if(array[2] > array[0] && array[2] > array[1])
+        printf("Maximum value of three integers : %d",array[2]);
+    else
+        printf("The three integers are Equal");
+
+
+
+
+
+
+}

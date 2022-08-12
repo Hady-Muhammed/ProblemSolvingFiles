@@ -1,0 +1,53 @@
+| PROBLEM | :
+
+ Write a C program to calculate the sum all numbers between two given numbers (inclusive) not divisible by 7. 
+Sample Output:
+
+Input two numbers(integer):
+25
+5
+Sum of all numbers between said numbers (inclusive) not divisible by 7:
+273
+Sample Output:
+
+Input two numbers(integer):
+6
+36
+Sum of all numbers between said numbers (inclusive) not divisible by 7:
+546
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:07
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int x,y,sum=0;
+    printf("Input two numbers(integers):\n");
+    scanf("%d",&x);
+    scanf("%d",&y);
+     if(x>y){
+        x = x+y;
+        y = x-y;
+        x = x-y;
+    }
+    for(int i = x ; i <= y ; i++)
+        if(i%7!=0)
+            sum+=i;
+
+
+printf("Sum of all numbers between said numbers (inclusive) not divisible by 7:\n");
+printf("%d",sum);
+
+}
+

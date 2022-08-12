@@ -1,0 +1,66 @@
+| PROBLEM | :
+
+
+Write a C program that read 5 numbers and counts the number of positive numbers and print the average of all positive values. 
+Test Data :
+Input the first number: 5
+Input the second number: 8
+Input the third number: 10
+Input the fourth number: -5
+Input the fifth number: 25
+Expected Output:
+Number of positive numbers: 4
+Average value of the said positive numbers: 12.00
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:34
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+
+#include <stdio.h>
+
+int main(){
+int n1,n2,n3,n4,n5;
+int positive=0,sum=0;
+float avg;
+    printf("Input the first number: ");scanf("%d",&n1);
+    if(n1 > 0){
+        sum+=n1;
+        positive++;
+    }
+    printf("\nInput the second number: ");scanf("%d",&n2);
+    if(n2 > 0){
+        sum+=n2;
+        positive++;
+    }
+    printf("\nInput the third number: ");scanf("%d",&n3);
+    if(n3 > 0){
+        sum+=n3;
+        positive++;
+    }
+
+    printf("\nInput the second number: ");scanf("%d",&n4);
+   if(n4 > 0){
+        sum+=n4;
+        positive++;
+    }
+    printf("\nInput the second number: ");scanf("%d",&n5);
+   if(n5 > 0){
+        sum+=n5;
+        positive++;
+    }
+    avg = (float)sum/positive;
+    printf("\nNumber of positive numbers = %d",positive);
+    printf("\n\nAverage value of positive numbers : %f",avg);
+
+}

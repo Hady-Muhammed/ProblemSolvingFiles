@@ -1,0 +1,32 @@
+| PROBLEM | :
+
+Write a program in C to print a string in reverse order. 
+Test Data :
+Input a string to reverse : Welcome
+Expected Output :
+Reversed string is: emocleW
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:43
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <string.h>
+
+int main(){ char a[100];
+        printf("Input a string to reverse: ");scanf("%s",a);
+        if(a==NULL){
+            return 0;
+        }else{
+        printf("\nReversed string is: ");
+        for(char i = strlen(a)-1 ; i >= 0 ; i--)
+            printf("%c",a[i]);
+
+        }
+}

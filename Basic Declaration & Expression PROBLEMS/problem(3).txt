@@ -1,0 +1,76 @@
+| PROBLEM | :
+Write a C program to print a block F using hash (#), 
+where the F has a height of six characters and width of five and four characters. And also to print a big 'C'.
+
+Expected Output:
+
+######
+#
+#
+#####
+#
+#
+#
+    ######
+  ##      ##
+ #
+ #
+ #
+ #
+ #
+  ##      ##
+    ######
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:36
+
+ Did i checked the question answer? = YES
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+int main(){
+    for(int i = 1 ; i < 7 ; i++ ){
+
+        if(i==1 || i==4)
+            for(int j = 1 ; j < 5 ; j++)
+                printf("#");
+
+      printf("#\n");
+    }
+
+printf("\n\n");
+#include <stdio.h>
+int main(){
+    for(int i = 1 ; i < 7 ; i++ ){
+							//
+        if(i==1 || i==4)				// I solved this part 100% my effort					
+            for(int j = 1 ; j < 5 ; j++)		//
+                printf("#");				//
+   							//		
+      printf("#\n");					//
+    }							//
+printf("\n\n");						//
+
+
+
+   printf("    ######\n");				//	
+   printf("  ##      ##\n");				//
+   printf(" #\n");					//
+   printf(" #\n");					// I checked this part from the problem answer
+   printf(" #\n");					//
+   printf(" #\n");					//
+   printf(" #\n");					//
+   printf("  ##      ##\n");				//
+   printf("    ######\n");				//
+
+}
+
+
+
+}
+
+

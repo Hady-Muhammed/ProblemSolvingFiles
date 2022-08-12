@@ -1,0 +1,33 @@
+| PROBLEM | :
+
+ Write a C program that accepts principle, rate of interest, time and compute the simple interest. 
+Test Data:
+Input Data: p = 10000, r = 10% , t = 12 year
+Expected Output:
+Input principle, Rate of interest & time to find simple interest:
+Simple interest = 12000
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:47
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int p,r,t,SI;
+printf("Input principle, Rate of interest & time to find simple interest: \n");
+printf("P = ");scanf("%d",&p);
+printf("R(%%) = ");scanf("%d",&r);
+printf("T = ");scanf("%d",&t);
+
+SI = (p*r*t)/100;
+printf("Simple interest: %d",SI);
+
+
+}

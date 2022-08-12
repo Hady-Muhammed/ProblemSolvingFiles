@@ -1,0 +1,91 @@
+| PROBLEM | :
+
+Write a C program to find the difference between the largest integer and the smallest integer, which are created by 8 numbers from 0 to 9. The number that can be rearranged shall start with 0 as in 00135668. 
+Input:
+Data is a sequence of 8 numbers (digits from 0 to 9).
+Output:
+The difference between the largest integer and the smallest integer.
+Sample Output:
+
+Input an integer created by 8 numbers (0 to 9):
+25346879
+
+The difference between the largest integer and the smallest integer.
+98765432 - 23456789 = 75308643
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:41:21
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int a[8];
+
+void swap(int *x , int *y){
+    *x=*x+*y;                   //swaping the elements in the array for arrangement
+    *y=*x-*y;
+    *x=*x-*y;
+}
+void PutNumInArray(int n){
+int digit,i = 0;                //converting the number into array of integers
+    while(n != 0){
+        digit = n%10;
+        a[i] = digit;
+        n /= 10;
+        i++;
+    }
+
+}
+
+void ArrangeArrayDescendingly(int a[]){
+    for(int j = 1 ; j <= 7 ; j++){
+        for(int i = 0 ; i < 8 ; i++){
+            if(a[i] < a[i+1]){
+                swap(&a[i],&a[i+1]);
+            }
+
+        }
+    }
+}
+
+void ArrangeArrayAscendingly(int a[]){
+
+    for(int j = 1 ; j <= 7 ; j++){
+        for(int i = 0 ; i < 7 ; i++){
+            if(a[i] > a[i+1]){
+                swap(&a[i],&a[i+1]);
+            }
+
+        }
+    }
+}
+
+int PutArraytoNum(int a[]){
+    int n = 0,i = 0,j = 10000000;
+        while(i != 8){
+            n = n + a[i] * j;
+            j/=10;
+            i++;
+        }
+        return n;
+}
+
+
+
+int main(){ int n,l,n1,n2;
+    printf("Input an integer created by 8 numbers (0 to 9): ");scanf("%d",&n);
+    PutNumInArray(n);
+    ArrangeArrayDescendingly(a);
+    n1=PutArraytoNum(a);
+    ArrangeArrayAscendingly(a);
+    n2=PutArraytoNum(a);
+    printf("\n\nThe difference between the largest integer and the smallest integer.\n");
+    printf("%d - %d = %d",n1,n2,n1-n2);
+}

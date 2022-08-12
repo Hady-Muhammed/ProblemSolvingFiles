@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a C program that takes two integers and test whether they are multiplies are not. Go to the editor
+In science, a multiple is the product of any quantity and an integer. In other words, for the quantities a and b, we say that b is a multiple of a if b = na for some integer n, which is called the multiplier. If a is not zero, this is equivalent to saying that b/a is an integer.
+Sample Output:
+Input two integers:
+3
+9
+Multiplies
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:17
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int x,y;
+    printf("Input two integers: ");
+    scanf("%d",&x);
+    scanf("%d",&y);
+
+    if(x%y==0 || y%x==0)
+        printf("Multiplies");
+    else
+        printf("Not Multiples");
+
+}
+

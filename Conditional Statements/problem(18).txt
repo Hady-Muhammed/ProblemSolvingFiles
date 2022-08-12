@@ -1,0 +1,29 @@
+| PROBLEM | :
+
+Write a C program to calculate profit and loss on a transaction. 
+Test Data :
+500 700
+Expected Output :
+You can booked your profit amount : 200
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code =
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){     int x,y,profit;
+        scanf("%d%d",&x,&y);
+        profit=x-y;
+        printf("You can booked your profit amount : %d",profit);
+
+
+}

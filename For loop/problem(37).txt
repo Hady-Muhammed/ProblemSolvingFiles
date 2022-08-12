@@ -1,0 +1,32 @@
+| PROBLEM | :
+
+Write a program in C to display the number in reverse order. 
+Test Data :
+Input a number: 12345
+Expected Output :
+The number in reverse order is : 54321
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:47
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){
+        int n,d;
+        printf("Input a number: ");scanf("%d",&n);
+        printf("\nThe number in reverse order is : ");
+        for(int i = n ; i > 0 ; ){
+           d=i%10;
+           i/=10;
+           printf("%d",d);
+        }
+
+}

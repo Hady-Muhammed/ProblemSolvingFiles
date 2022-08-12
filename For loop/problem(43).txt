@@ -1,0 +1,39 @@
+| PROBLEM | :
+
+Write a C program to find HCF (Highest Common Factor) of two numbers. 
+Test Data :
+Input 1st number for HCF: 24
+Input 2nd number for HCF: 28
+Expected Output :
+HCF of 24 and 28 is : 4
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:08
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){ int n1,n2,hcf,bigger;
+
+    printf("Input 1st number for HCF: ");scanf("%d",&n1);
+    printf("Input 2nd number for HCF: ");scanf("%d",&n2);
+   if(n1>n2)
+       bigger=n1;
+   else if(n1<n2)
+        bigger=n2;
+
+        for(int i = 2 ; i <= bigger ; i++)
+                if(n1%i==0 && n2%i==0)
+                        hcf = i;
+                
+        
+        printf("\n\nHCF of %d and %d is : %d",n1,n2,hcf);
+}

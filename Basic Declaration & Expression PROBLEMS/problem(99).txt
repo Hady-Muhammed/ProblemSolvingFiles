@@ -1,0 +1,58 @@
+| PROBLEM | :
+
+Write a C program that takes some integer values from the user and print a histogram. 
+Sample Output:
+Input number of histogram bar (Maximum 10):
+4
+Input the values between 0 and 10 (separated by space):
+9
+7
+4
+3
+
+
+Histogram:
+#########
+#######
+####
+###
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 9:46
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+int size;
+int z=0;
+    printf("Input number of histogram bar (Maximum 10):");
+    scanf("%d",&size);
+    if(size > 10){
+        printf("invalid number!");
+        return 0;
+    }
+    int a[size];
+    printf("Input the values between 0 and 10 :\n");
+    for(int i = 0 ; i < size ; i++){
+        scanf("%d",&a[i]);              // for reading all the values
+    }
+
+	printf("Histogram:\n");
+    for(int j = 1 ; j < size+1 ; j++ ){		// for repeating the process n times
+        for(int k = 0 ; k < a[z] ; k++){	
+            printf("#");			// for printing hashs as many as the array of n element
+        }
+        printf("\n");
+        z++;					// then switching to the next element in the array
+    }
+
+}

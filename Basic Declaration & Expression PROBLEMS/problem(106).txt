@@ -1,0 +1,57 @@
+| PROBLEM | :
+
+Write a C program that accepts 7 integer values and count the even, odd, positive and negative values. 
+Sample Output:
+Input 7 integers:
+10
+12
+15
+-15
+26
+35
+17
+
+Number of even values: 3
+Number of odd values: 4
+Number of positive values: 6
+Number of negative values: 1
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:30
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int a[7];
+            int even=0,odd=0,ngtv=0,pstv=0;
+        printf("Input 7 integers:");
+        for(int i = 0 ; i < 7 ; i++){
+            scanf("%d",&a[i]);
+            if(a[i]%2==0)
+                    even++;
+
+            if(a[i]%2==1 || a[i]%2==-1)
+                    odd++;
+
+            if(a[i]>0)
+                    pstv++;
+
+            if(a[i]<0)
+                    ngtv++;
+
+        }
+   printf("\nNumber of even values: %d",even);
+   printf("\nNumber of odd values: %d",odd);
+   printf("\nNumber of positive values: %d",pstv);
+   printf("\nNumber of negative values: %d",ngtv);
+}
+

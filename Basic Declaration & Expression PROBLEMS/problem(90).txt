@@ -1,0 +1,64 @@
+| PROBLEM | :
+
+Write a C program to find all prime palindromes in the range of two given numbers x and y (5 <= x<y<= 1000,000,000). 
+A number is called prime palindrome if the number is both a prime number and a palindrome.
+Sample Output:
+Input two numbers (separated by a space):
+List of prime palindromes:
+0
+1
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:34:52
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int IsPalindrome(int i){                
+    int y;
+    char a[1000000];
+   sprintf(a,"%d",i);               //converting no to string 
+     strrev(a);                     //then reverse it
+     y=atoi(a);                     //then converting it to no again
+
+    if( i - y  == 0)                // checking no - reversed no is the same or not     
+        return 1;
+    else
+        return 0;
+}
+
+
+int main(){ int x,y,count=0;        // variable declarations
+
+    printf("Input two numbers: ");scanf("%d",&x);
+    scanf("%d",&y);                             // getting the range to display the prime palindromes
+    printf("\nList of prime palindromes:\n");
+    int i = x+1;
+    int z=2;
+    while(i > x && i < y ){
+            while(i!=z-1){              // PrimeOrNot
+                if(i%z==0)
+                        count++;
+             z++;
+            }
+
+        if(count==1){                   //ifPrime?
+                if(IsPalindrome(i))     //PalindromeOrNot
+                    printf("%d\n",i);
+            }
+
+    z=2;
+    count=0;
+    i++;
+    }
+
+}
+

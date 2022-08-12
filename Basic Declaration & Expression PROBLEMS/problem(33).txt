@@ -1,0 +1,46 @@
+| PROBLEM | :
+
+Write a C program that accepts some integers from the user and find the highest value and the input position. 
+Test Data :
+Input 5 integers:
+5
+7
+15
+23
+45
+Expected Output:
+Highest value: 45
+Position: 5
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:01
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+
+int main(){
+    int position=0,a[5],max;
+    printf("Input 5 integers: \n");
+        for(int i = 0 ; i < 5 ; i++)
+                scanf("%d",&a[i]);
+    max=a[0];
+    for(int j = 0 ; j < 5 ; j++)
+        if(a[j] > max){
+            max=a[j];
+            position=j+1;
+        }
+
+
+
+printf("Highest value : %d\n",max);
+printf("Position : %d\n",position);
+
+}
+

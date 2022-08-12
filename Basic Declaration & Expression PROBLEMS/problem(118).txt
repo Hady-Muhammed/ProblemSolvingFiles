@@ -1,0 +1,41 @@
+| PROBLEM | :
+
+Write a C program that reads five subject marks (0-100) of a student and calculate the average of these marks. 
+Sample Output:
+
+Input five subject marks(0-100):
+75
+84
+56
+98
+68
+Average marks = 76.20
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:52
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int a[5],sum=0,n=0;
+        float avg;
+    printf("Input five subject marks(0-100):");
+        for(int i = 0 ; i < 5 ; i++){
+            scanf("%d",&a[i]);
+            sum+=a[i];
+            n++;
+        }
+    avg = (float)sum/n;
+printf("Average marks = %f",avg);
+}
+

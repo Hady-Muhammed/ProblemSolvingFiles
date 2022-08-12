@@ -1,0 +1,51 @@
+| PROBLEM | :
+
+ Write a C program to find Strong Numbers within a range of numbers. 
+Test Data :
+Input starting range of number : 1
+Input ending range of number: 200
+Expected Output :
+The Strong numbers are :
+1 2 145
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:57
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+int fact(int x){
+  int facto = 1;
+    for(int i = x ; i >= 1 ; i--){
+        facto*=i;
+    }
+
+return facto;
+
+}
+int main(){     int x,y,n,digit,sum=0;
+        printf("Input starting range of number : ");scanf("%d",&x);
+        printf("Input ending range of number: ");scanf("%d",&y);
+
+    for(int i = x ; i <= y ; i++){
+            n=i;
+        while(n!=0){
+            digit=n%10;
+            sum+=fact(digit);
+            n/=10;
+        }
+        if(sum==i)
+            printf("%d ",i);
+
+sum=0;
+    }
+
+
+
+}

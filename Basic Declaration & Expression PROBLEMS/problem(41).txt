@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a C program to print 3 numbers in a line, starting from 1 and print n lines. Accept number of lines (n, integer) from the user. 
+Test Data :
+Input number of lines: 5
+Expected Output:
+1 2 3
+4 5 6
+7 8 9
+10 11 12
+13 14 15
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:35
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int n;
+    int x=1;
+        printf("Input number of lines: ");scanf("%d",&n);
+
+        for(int i = 1 ; i <= n ; i++){
+            printf("%d %d %d\n",x,x+1,x+2);
+            x+=3;
+        }
+
+}

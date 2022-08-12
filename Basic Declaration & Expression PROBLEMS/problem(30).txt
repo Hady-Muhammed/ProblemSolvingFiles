@@ -1,0 +1,35 @@
+| PROBLEM | :
+
+Write a C program to find and print the square of each one of the even values from 1 to a specified value.
+Test Data :
+List of square of each one of the even values from 1 to a 4 :
+Expected Output:
+2^2 = 4
+4^2 = 16
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:26
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int x;
+    printf("List of square of each one of the even values from 1 to x.\n");
+    printf("Input the x: ");scanf("%d",&x);
+
+    for(int i = 1 ; i <= x ; i++){
+        if(i%2==0){
+            printf("%d^2 = %f\n",i,pow(i,2));
+    }
+    }
+}

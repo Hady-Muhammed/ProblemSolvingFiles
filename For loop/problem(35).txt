@@ -1,0 +1,47 @@
+| PROBLEM | :
+
+ Write a program in C to display the first n terms of Fibonacci series.
+Fibonacci series 0 1 2 3 5 8 13 .....
+Test Data :
+Input number of terms to display : 10
+Expected Output :
+Here is the Fibonacci series upto to 10 terms :
+0 1 1 2 3 5 8 13 21 34
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 47:04
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x=0,y=1,tmp,sum;
+            int n;
+    printf("Input number of terms to display : ");scanf("%d",&n);
+         int i = 0;
+    printf("\n\nHere is the Fibonacci series upto to %d terms :\n",n);
+        do{
+            while(i <= 2){
+                printf("%d ",x);
+                i++;
+                break;
+            }
+            while(i <= 2){
+                printf("%d ",y);
+                i++;
+                break;
+            }
+            sum=x+y;
+            printf("%d ",sum);
+            i++;
+            x=y;
+            y=sum;
+
+        }while(i!=n);
+
+}

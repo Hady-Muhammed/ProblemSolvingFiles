@@ -1,0 +1,28 @@
+| PROBLEM | :
+
+Write a C program to accept the height of a person in centimeter and categorize the person according to their height. 
+Test Data : 135
+Expected Output :
+The person is Dwarf.
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:11
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int hght;
+    scanf("%d",&hght);
+    if(hght >= 140)
+        printf("The person is average");
+    else
+        printf("The person is dwarf");
+
+
+}

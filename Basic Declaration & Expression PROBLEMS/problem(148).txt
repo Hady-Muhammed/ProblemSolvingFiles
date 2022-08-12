@@ -1,0 +1,109 @@
+| PROBLEM | :
+
+ Write a C program, which adds up columns and rows of given table as shown in the following figure. 
+Input:
+n (the size of row and column of the given table)
+1st row of the table
+2nd row of the table
+:
+:
+n th row of the table
+The input ends with a line consisting of a single 0.
+Sample Output:
+
+Input number of rows/columns:
+4
+Input the cell value
+
+Row 0 input cell values
+25
+69
+51
+26
+
+Row 1 input cell values
+68
+35
+29
+54
+
+Row 2 input cell values
+54
+57
+45
+63
+
+Row 3 input cell values
+61
+68
+47
+59
+
+Result:
+   25   69   51   26  171
+   68   35   29   54  186
+   54   57   45   63  219
+   61   68   47   59  235
+  208  229  172  202  811
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 17:31
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int a[100][100],n,sumH=0,sumV=0;
+    printf("Input number of rows/columns:");
+    scanf("%d",&n);
+        for(int i = 0 ; i < n ; i++){
+                printf("Row %d input cell values\n",i);
+            for(int j = 0 ; j < n ; j++){
+                scanf("%d",&a[i][j]);
+                sumH+=a[i][j];
+                if(j==n-1){
+                        a[i][j+1]=sumH;
+                }
+
+
+            }
+            sumH=0;
+           printf("\n");
+        }
+
+
+     for(int l = 0 ; l < n ; l++){
+        int k = 0;
+        while(k!=n){
+            sumV+=a[k][l];
+            if(k==n-1)
+                a[n][l]=sumV;
+            k++;
+        }
+        sumV=0;
+     }
+
+     for(int y = 0 ; y < n ; y++)
+                    a[n][n]+=a[n][y];
+
+
+
+ printf("Result:\n");
+                for(int x = 0 ; x <= n; x++){
+                    for(int y = 0 ; y <= n ; y++)
+                            printf("%d ",a[x][y]);
+
+                printf("\n");
+                }
+
+}
+

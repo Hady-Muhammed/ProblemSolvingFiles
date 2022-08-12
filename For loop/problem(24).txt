@@ -1,0 +1,48 @@
+| PROBLEM | :
+
+Write a program in C to find the sum of the series [ x - x^3 + x^5 + ......]. 
+Test Data :
+Input the value of x :2
+Input number of terms : 5
+Expected Output :
+The values of the series:
+2
+-8
+32
+-128
+512
+The sum = 410
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:06
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){ int x,n,p;
+            int sum=0;
+    printf("Input the value of x : ");scanf("%d",&x);
+    printf("Input number of terms : ");scanf("%d",&n);
+printf("The values of the series:\n");
+    for(int i = 1 , z = 1 ; i <= n ; i++ , z+=2){
+        if(i%2==0){
+        p = pow(x,z);
+        printf("%d\n",p*-1);
+        sum+=pow(x,z)*-1;
+        }else{
+        p = pow(x,z);
+        printf("%d\n",p);
+        sum+=pow(x,z);
+        }
+    }
+    printf("The sum = %d",sum);
+
+}
+

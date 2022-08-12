@@ -1,0 +1,31 @@
+| PROBLEM | :
+
+Write a C program that read the item’s price and create new item price and increased price of that item according to the item price table. 
+Sample Output:
+Input the item price:525
+New Item price: 582.75
+Increased price: 57.75
+Increase Percentage: 11%
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:24
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ float x,itemPrice,newPrice;
+            int percentage;
+    printf("Input the item price: ");scanf("%f",&itemPrice);
+    printf("Input the increase percentage: %% ");scanf("%d",&percentage);
+    x = itemPrice * percentage / 100;
+    newPrice = itemPrice+x;
+    printf("Increased price: %.2f",x);
+    printf("\tNew item price: %.2f",newPrice);
+}

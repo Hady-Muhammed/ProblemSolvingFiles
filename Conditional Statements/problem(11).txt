@@ -1,0 +1,34 @@
+| PROBLEM | :
+
+Write a C program to calculate the root of a Quadratic Equation. 
+Test Data : 1 5 7
+Expected Output :
+Root are imaginary;
+No solution.
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 7:32
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+#include <math.h>
+int main(){ int a,b,c;
+    float eq1,eq2;
+        printf("enter value of a ,b ,c: ");
+        scanf("%d%d%d",&a,&b,&c);
+        eq1 = (-b+sqrt(b*b-4*a*c))/2*a;
+        eq2 = (-b-sqrt(b*b-4*a*c))/2*a;
+    if(eq1 < 0 || eq2 < 0)
+         printf("root1: %f\nroot2: %f",eq1,eq2);
+    else
+        printf("Roots are imaginary!");
+
+}

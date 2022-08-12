@@ -1,0 +1,37 @@
+| PROBLEM | :
+
+Write a C program to calculate the sum of two given integers and count the number of digits of the sum value.
+Sample Output:
+
+Input two integer values:
+68
+75
+
+Number of digits of the sum value of the said numbers:
+3
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:14
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x,y,z,count=0;
+        printf("Input two integer values:\n");
+        scanf("%d",&x);
+        scanf("%d",&y);
+        z=x+y;
+        while(z!=0){
+        z/=10;
+        count++;
+        }
+        printf("Number of digits of the sum value of the said numbers:\n");
+        printf("%d",count);
+
+}

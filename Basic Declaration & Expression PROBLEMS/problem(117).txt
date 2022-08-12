@@ -1,0 +1,39 @@
+| PROBLEM | :
+
+Write a C program that read two integers and dividing the first number by second, print the result of this division with two digits after the decimal point and print "Division not possible..!" if the division is not possible. 
+Sample Output:
+
+Input two integer values:
+75
+5
+Result: 15.00
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:46
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int x,y;
+    float z;
+    printf("Input two integer values:\n");
+    scanf("%d",&x);
+    scanf("%d",&y);
+    if(y==0){
+     printf("\nDivision is not possible!");
+    }else{
+        z=x/(float)y;
+        printf("Result: %.2f",z);
+    }
+
+}

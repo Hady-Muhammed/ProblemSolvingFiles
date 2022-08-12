@@ -1,0 +1,47 @@
+| PROBLEM | : 
+
+Write a C program that reads the side (side sizes between 1 and 10 ) of a square and prints square using hash (#) character. 
+Sample Input: 10
+Sample Output:
+
+Input the side of the square: 
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+ # # # # # # # # # #
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:45
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int s;
+    printf("Input the side of the square(side sizes between 1 and 10 ): ");scanf("%d",&s);
+    if(s < 1 || s > 10)
+        printf("Invalid Input!");
+    else{
+
+        for(int i = 1 ; i <= s ; i++){
+                for(int j = 1 ; j <= s ; j++){
+                        printf("# ");
+                }
+                printf("\n");
+        }
+
+
+    }
+
+}

@@ -1,0 +1,60 @@
+| PROBLEM | :
+
+Write a C program that generates 50 random numbers between -0.5 and 0.5 and writes them in a file rand.dat. The first line of ran.dat contains the number of data and the next 50 lines contains the 50 random numbers. 
+50
+-0.4215
+0.2620
+0.3065
+-0.0485
+.... 0.3980
+0.1750
+0.4780
+-0.2915
+0.0715
+0.3565
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 49:34
+
+ Did i checked the question answer? = YES
+
+ LEARNED!
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main()
+{   char c;
+    FILE *ptr;
+
+    ptr = fopen("rand.dat","w");
+    if(ptr == NULL){
+        printf("File cannot be opened.");
+        return 0;
+    }else{
+
+        srand(time(0));
+    fprintf(ptr,"50\n");
+        for(int i = 1 ; i < 51 ; i++){
+            fprintf(ptr,"%.4f\n",(rand() % 2001 - 1000) / 2.e3);
+        }
+
+
+    }
+    fclose(ptr);
+
+    ptr = fopen("rand.dat","r");
+    c = fgetc(ptr);
+    while(c != EOF){
+        printf("%c",c);
+        c = fgetc(ptr);
+    }
+    fclose(ptr);
+    return 0;
+}
+

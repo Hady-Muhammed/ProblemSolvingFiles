@@ -1,0 +1,32 @@
+| PROBLEM | :
+
+Write a C program to accept two integers and check whether they are equal or not. 
+Test Data : 15 15
+Expected Output :
+Number1 and Number2 are equal
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:06
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){ int x,y;
+        scanf("%d%d",&x,&y);
+        if(x==y)
+            printf("\nNumber1 and Number2 are equal");
+        else
+            printf("\nNumber1 and Number2 are NOT equal");
+
+
+
+
+}

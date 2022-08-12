@@ -1,0 +1,42 @@
+| PROBLEM | :
+
+Write a C program to convert a given integer (in days) to years, months and days, assumes that all months have 30 days and all years have 365 days. 
+Test Data :
+Input no. of days: 2535
+Expected Output:
+6 Year(s)
+11 Month(s)
+15 Day(s)
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 8:02
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+
+#include <stdio.h>
+
+
+int main(){
+    int days,yrs,months,dys;
+        printf("Input no. of days : ");
+        scanf("%d",&days);
+    yrs = days /365;
+    months = (days - yrs*365)/30;
+    dys = (days - yrs*365 - months*30);
+
+    printf("\n%d Year(s)",yrs);
+    printf("\n%d Month(s)",months);
+    printf("\n%d Day(s)",dys);
+
+
+
+}

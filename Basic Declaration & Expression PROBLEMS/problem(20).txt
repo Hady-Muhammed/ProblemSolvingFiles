@@ -1,0 +1,51 @@
+| PROBLEM | :
+
+Write a C program to print the roots of Bhaskara’s formula from the given three floating numbers. Display a message if it is not possible to find the roots. 
+Test Data :
+Input the first number(a): 25
+Input the second number(b): 35
+Input the third number(c): 12
+Expected Output:
+Root1 = -0.60000
+Root2 = -0.80000
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:23
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a,b,c;
+    float x1,x2;
+
+printf("Input the first number(a): ");scanf("%d",&a);
+printf("Input the second number(b): ");scanf("%d",&b);
+printf("Input the third number(c): ");scanf("%d",&c);
+
+if(a==0){
+    printf("It not possible to find the roots");
+}else{
+
+x1 = (-b+sqrt((b*b)-(4*a*c)))/(2*a);
+x2 = (-b-sqrt((b*b)-(4*a*c)))/(2*a);
+
+
+printf("Root1 = %f",x1);
+printf("\tRoot2 = %f",x2);
+
+}
+
+
+
+
+}
+

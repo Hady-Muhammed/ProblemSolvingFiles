@@ -1,0 +1,39 @@
+| PROBLEM | :
+
+ Write a program in C to display the pattern like a pyramid using asterisk and each row contain an odd number of asterisks. 
+
+   *
+  ***
+ *****
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:15
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int l=1;
+    for(int i = 1 ; i <= 3 ; i++){
+        for(int j = 1 ; j <= 3-i ; j++){
+            printf(" ");
+        }
+
+        for(int k = 1 ; k <= l ; k++){
+            printf("*");
+        }
+        l+=2;
+        printf("\n");
+
+    }
+
+
+}

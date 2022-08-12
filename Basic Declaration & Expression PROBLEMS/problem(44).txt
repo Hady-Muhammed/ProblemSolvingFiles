@@ -1,0 +1,41 @@
+| PROBLEM | :
+
+Write a C program to calculate the average marks of mathematics of some students. Input 0 (excluding to calculate the average) or negative value to terminate the input process. 
+Test Data :
+Input Mathematics marks (0 to terminate): 10
+15
+20
+25
+0
+Expected Output:
+Average marks in Mathematics: 17.50
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:39
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){
+    int mark=1,sum=0,num=0;
+    float avg;
+    printf("Input Mathematics marks (0 to terminate):\n");
+    while(mark!=0){
+        scanf("%d",&mark);
+        sum+=mark;
+        if(mark!=0)
+            num++;
+    }
+    avg = (float)sum/num;
+    printf("\n\nAverage marks in Mathematics: %f",avg);
+}
+

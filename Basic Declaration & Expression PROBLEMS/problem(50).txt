@@ -1,0 +1,45 @@
+| PROBLEM | :
+
+Write a C program to read an array of length 5 and print the position and value of the array elements of value less than 5. 
+Test Data:
+Input the 5 members of the array:
+15
+25
+4
+35
+40
+Expected Output:
+A[2] = 4.0
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:30
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int a[5],x,y;
+    printf("Input the 5 members of the array:\n");
+    for(int i = 0 ; i < 5 ; i++)
+        scanf("%d",&a[i]);
+
+
+  for(int j = 0 ; j < 5 ; j++) {
+
+        if(a[j] < 5){
+            y=j;
+            x=a[j];
+                }
+  }
+printf("A[%d] = %d",y,x);
+
+}
+
+

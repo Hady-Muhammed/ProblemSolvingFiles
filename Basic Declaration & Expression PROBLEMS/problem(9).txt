@@ -1,0 +1,40 @@
+| PROBLEM | :
+
+Write a C program that accepts two integers from the user and calculate the sum of the two integers. 
+Test Data :
+Input the first integer: 25
+Input the second integer: 38
+Expected Output:
+Sum of the above two integers = 63
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:56
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+int num1,num2,n,sum=0;
+
+
+printf("Enter two nums to calc their sum!\n");
+
+    for(int i = 1 ; i < 3 ; i++){
+        printf("Enter num #%d :\n",i);
+        scanf("%d",&n);
+        sum+=n;
+    }
+
+printf("\n SUM = %d",sum);
+
+
+}
+
+

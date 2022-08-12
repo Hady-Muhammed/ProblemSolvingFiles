@@ -1,0 +1,31 @@
+| PROBLEM | :
+
+Write a C program to check whether an alphabet is a vowel or consonant. 
+Test Data :
+k
+Expected Output :
+The alphabet is a consonant.
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:21
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){
+        char ch;
+        scanf("%c",&ch);
+        if(ch=='a' || ch=='e' || ch=='i' || ch=='u' || ch=='o' || ch=='h')
+            printf("The alphabet is a vowel");
+        else
+            printf("The alphabet is a consonant");
+
+}

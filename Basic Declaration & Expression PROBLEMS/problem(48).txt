@@ -1,0 +1,47 @@
+| PROBLEM | :
+
+Write a C program to read and print the elements of an array of length 7, before print replace every negative number, zero with 100. 
+Test Data:
+Input the 5 members of the array:
+25
+45
+35
+65
+15
+
+Expected Output:
+Array values are:
+n[0] = 25
+n[1] = 45
+n[2] = 35
+n[3] = 65
+n[4] = 15
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:02
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+ int n[5];
+ printf("Input the 5 members of the array:\n");
+ for(int i = 0 ; i < 5 ; i++){
+        scanf("%d",&n[i]);
+        if(n[i] == 0 || n[i] < 0)
+            n[i]=100;
+ }
+
+ printf("\nArray values are:\n");
+ for(int j = 0 ; j < 5 ; j++)
+    printf("n[%d] = %d\n",j,n[j]);
+
+}

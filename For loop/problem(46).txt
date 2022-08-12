@@ -1,0 +1,47 @@
+| PROBLEM | :
+
+Write a program in C to convert a binary number into a decimal number using math function. 
+Test Data :
+Input the binary number :1010100
+Expected Output :
+The Binary Number : 1010100
+The equivalent Decimal Number is : 84
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 7:46
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <math.h>
+int ToDecimal(int b,int digits){
+ int sum=0;
+ int d;
+    for(int i = 0 ; i <= digits-1 ; i++){
+        d=b%10;
+        sum+=d*pow(2,i);
+        b/=10;
+    }
+
+    return sum;
+
+}
+
+
+int main(){
+        int b,dec,digits;
+    printf("Input the binary number : ");scanf("%d",&b);
+    printf("\nHow many digits you entered in the pervious binary?\n");
+    scanf("%d",&digits);
+    printf("\n\nThe Binary Number : %d",b);
+    dec = ToDecimal(b,digits);
+    printf("\nThe equivalent Decimal Number is : %d",dec);
+
+}
+

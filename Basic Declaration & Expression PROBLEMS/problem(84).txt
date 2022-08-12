@@ -1,0 +1,41 @@
+| PROBLEM | :
+
+Write a C program to calculate and print the average of some integers. Accept all the values preceding 888. 
+Sample Input:12
+15
+24
+888
+Sample Output:
+Input each number on a separate line (888 to exit):
+
+The average value of the said numbers is 17.000000
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:16
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ float avg;
+        int n,x=0,sum=0;
+do{
+        avg = (float)sum/x;
+    printf("Input each number on a separate line (888 to exit): ");
+    scanf("%d",&n);
+    if(n==888)
+        printf("The average value of the said numbers is %f",avg);
+    else{
+    sum+=n;
+    x++;
+    }
+}while(n!=888);
+
+
+}

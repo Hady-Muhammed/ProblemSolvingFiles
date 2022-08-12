@@ -1,0 +1,74 @@
+| PROBLEM | :
+
+Write a program in C to merge two files and write it in a new file. 
+
+Assume that the content of the file test.txt and test1.txr is :                                                                       
+ The content of the file test.txt is  : 
+This is the file test.txt. 
+
+ The content of the file test1.txt is  : 
+This is the file test1.txt.                                                                                                    
+Test Data :
+Input the 1st file name : test.txt
+Input the 2nd file name : test1.txt
+Input the new file name where to merge the above two files : mergefiles.txt
+Expected Output :
+
+ The two files merged into mergefiles.txt file successfully..!! 
+Here is the content of the merge file mergefiles.txt :
+
+ The content of the file mergefiles.txt is  :                                                                 
+This is the file test.txt.                                                                                    
+This is the file test1.txt.
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 12:38
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){     char f1[50],f2[50],nf[50],c;
+            FILE *f1ptr,*f2ptr,*nfptr;
+            printf("Input the 1st file name : ");scanf("%s",f1);
+            printf("Input the 2nd file name : ");scanf("%s",f2);
+            printf("Input the new file name where to merge the above two files : ");
+            scanf("%s",nf);
+            f1ptr = fopen(f1,"r");
+            f2ptr = fopen(f2,"r");
+            nfptr = fopen(nf,"a");
+            if(f1ptr == NULL || f2ptr == NULL){
+                printf("Files Cannot be opened!");
+                return 0;
+            }
+           while((c = fgetc(f1ptr)) != EOF){
+                fputc(c,nfptr);
+                 }
+                 fclose(f1ptr);
+           while((c = fgetc(f2ptr)) != EOF){
+                fputc(c,nfptr);
+                 }
+                 fclose(f2ptr);
+                 fclose(nfptr);
+
+                nfptr = fopen(nf,"a+");
+                 printf("\nThe two files merged into %s file successfully..!!\n",nf);
+                 printf("\nHere is the content of the merge file %s :\n",nf);
+                    while((c = fgetc(nfptr)) != EOF){
+                        printf("%c",c);
+                    }
+                    fclose(nfptr);
+
+
+}
+
+
+
+

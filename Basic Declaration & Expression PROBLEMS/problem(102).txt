@@ -1,0 +1,59 @@
+| PROBLEM | :
+
+Write a C program that reads three integers and sort the numbers in ascending order. Print the original numbers and sorted numbers. 
+Sample Output:
+Input 3 integers: 17
+-5
+25
+
+---------------------------
+Original numbers: 17, -5, 25
+Sorted numbers: -5, 17, 25
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 7:01
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+void swap(int *x,int *y){
+ *x = *x+*y;
+ *y = *x-*y;
+ *x = *x-*y;
+}
+
+int main(){  int a[3];
+    printf("Input 3 integers: ");
+    for(int i = 0 ; i < 3 ; i++){
+        scanf("%d",&a[i]);
+    }
+
+    printf("---------------------------");
+    printf("\nOriginal number: ");
+
+    for(int x = 0 ; x < 3 ; x++){
+        printf("%d, ",a[x]);
+    }
+
+    for(int j = 0 ; j < 3 ; j++){
+        if(a[j] > a[j+1]){
+            swap(&a[j],&a[j+1]);
+        }
+    }
+    printf("\n\nSorted numbers: ");
+
+    for(int y = 0 ; y < 3 ; y++){
+        printf("%d, ",a[y]);
+    }
+
+
+
+}

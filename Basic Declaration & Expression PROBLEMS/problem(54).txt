@@ -1,0 +1,31 @@
+| PROBLEM | :
+
+Write a C program that accepts a distance in centimeters and prints the corresponding value in inches. 
+Test Data:
+Input Data: 500cms
+Input the distance in cm:
+Distance of 500.00 cms is = 196.85 inches
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:49
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int distanceCM;
+    float distanceINCH;
+printf("Input the distance in cms: ");scanf("%d",&distanceCM);
+
+distanceINCH = distanceCM / 2.54;
+
+printf("Distance(inches) = %f",distanceINCH);
+
+}

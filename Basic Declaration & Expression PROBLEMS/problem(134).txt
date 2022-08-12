@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a C program to check whether three given lengths (integers) of three sides of a triangle form a right triangle or not. Print "Yes" if the given sides form a right triangle otherwise print "No". 
+Input:
+Integers separated by a single space.
+1 <= length of the side <= 1,000
+Sample Output:
+
+Input the three sides of a trainagel:
+12
+11
+13
+It is not a right angle triangle!
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:21
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x,y,z;
+        printf("Input the three sides of a triangle:\n");
+        scanf("%d%d%d",&x,&y,&z);
+        if( x==sqrt(y*y+z*z) || y==sqrt(x*x+z*z) || z==sqrt(y*y+x*x))
+            printf("\nThis is a right angled triangle");
+        else
+            printf("\nThis is NOT a right angled triangle");
+}
+

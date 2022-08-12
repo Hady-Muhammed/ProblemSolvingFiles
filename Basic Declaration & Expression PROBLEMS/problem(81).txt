@@ -1,0 +1,60 @@
+| PROBLEM | :
+
+Write a C program that reads the side (side sizes between 1 and 10 ) of a square and prints a hollow square using hash (#) character. 
+Sample Input: 10
+Sample Output:
+
+Input the size of the square: 
+##########
+#        #
+#        #
+#        #
+#        #
+#        #
+#        #
+#        #
+#        #
+##########
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 12:34
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int s;
+    printf("Input the side of the square(side sizes between 1 and 10 ):");scanf("%d",&s);
+    if(s < 1 || s > 10){
+        printf("Invalid input!");
+    }else{
+
+    for(int i = 1 ; i <= s ; i++){           // for loop of the new line printing
+           if(i==1 || i==s){
+                for(int j = 1 ; j <= s ; j++)   // for loop of printing hashs
+                    printf("#");
+           }else{    
+                  printf("#");
+
+               for(int k = 1 ; k <= s-2 ; k++){    // for loop of printing spaces
+                    printf(" ");
+                }
+
+                printf("#");
+
+           }                                       
+                      
+
+
+            printf("\n");
+        }
+
+    }
+    }

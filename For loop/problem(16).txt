@@ -1,0 +1,31 @@
+| PROBLEM | :
+
+Write a program in C to display the n terms of even natural number and their sum. 
+Test Data :
+Input number of terms : 5
+Expected Output :
+The even numbers are :2 4 6 8 10
+The Sum of even Natural Number upto 5 terms : 30
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:19
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int n,sum=0;
+   printf("Input number of terms: ");scanf("%d",&n);
+    printf("\n\nThe even numbers are: ");
+    for(int i = 2 ; i <= n*2 ; i+=2){
+        printf("%d ",i);
+        sum+=i;
+    }
+    printf("\nThe sum of even natural number uptp 5 terms: %d",sum );
+}

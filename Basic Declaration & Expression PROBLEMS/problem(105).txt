@@ -1,0 +1,51 @@
+| PROBLEM | :
+
+Write a C program that accepts seven floating point numbers and count the number of positive and negative numbers. Also print the average of all positive and negative values with two digit after the decimal number. 
+Sample Output:
+Input 7 numbers(int/float):
+25
+35.75
+15
+-3.5
+40
+35
+16
+
+6 Number of positive numbers: Average 27.79
+
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:28
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ float a[7],avg1,avg2,sump=0,sumn=0;
+        int positives=0,negatives=0;
+    printf("Input 7 numbers(int/float):");
+    for(int i = 0 ; i < 7 ; i++){
+        scanf("%f",&a[i]);
+        if(a[i]>0){ sump+=a[i];
+            positives++;}
+        else if(a[i]==0){
+
+        }else{ sumn+=a[i];
+            negatives++;
+        }
+    }
+avg1 = sump / positives;
+avg2 = sumn / negatives;
+printf("\n\n%d Number of positive numbers: Average %f",positives,avg1);
+printf("\n%d Number of negative numbers: Average %f",negatives,avg2);
+
+}
+

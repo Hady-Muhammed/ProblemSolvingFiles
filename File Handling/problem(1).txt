@@ -1,0 +1,35 @@
+| PROBLEM | :
+Write a program in C to create and store information in a text file. 
+Test Data :
+Input a sentence for the file : This is the content of the file test.txt.
+Expected Output :
+
+ The file test.txt created successfully...!! 
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:35
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){     char content[50];
+        printf("Input a sentence for the file : ");
+        scanf("%s",content);
+
+        FILE *fptr;
+        fptr = fopen("test.txt","w");
+        fprintf(fptr,"%s",content);
+        printf("The file test.txt created successfully...!! ");
+        fclose(fptr);
+
+
+}

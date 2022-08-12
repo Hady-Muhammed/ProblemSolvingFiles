@@ -1,0 +1,83 @@
+| PROBLEM | :
+
+ Write a C program to read an amount (integer value) and break the amount into smallest possible number of bank notes. 
+Test Data :
+Input the amount: 375
+Expected Output:
+There are:
+3 Note(s) of 100.00
+1 Note(s) of 50.00
+1 Note(s) of 20.00
+0 Note(s) of 10.00
+1 Note(s) of 5.00
+0 Note(s) of 2.00
+0 Note(s) of 1.00
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 36:18
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+    int n;
+    int NotesOF100=0,NotesOF50=0,NotesOF20=0,NotesOF10=0,NotesOF5=0,NotesOF2=0,NotesOF1=0;
+    printf("Input the amount (Max.500$): ");
+    scanf("%d",&n);
+    printf("\nThere are :\n");
+
+    while(n >= 100){
+        n-=100;
+        NotesOF100++;
+    }
+    while(n >= 50){
+         n-=50;
+         NotesOF50++;
+
+    }
+    while(n >= 20){
+         n-=20;
+         NotesOF20++;
+
+    }
+    while(n >= 10){
+         n-=10;
+         NotesOF10++;
+
+    }
+    while(n >= 5){
+         n-=5;
+         NotesOF5++;
+
+    }
+    while(n >= 2){
+         n-=2;
+         NotesOF2++;
+
+    }
+    while(n >= 1){
+         n-=1;
+         NotesOF1++;
+
+    }
+
+    printf("\n%d Note(s) of 100.00",NotesOF100);
+    printf("\n%d Note(s) of 50.00",NotesOF50);
+    printf("\n%d Note(s) of 20.00",NotesOF20);
+    printf("\n%d Note(s) of 10.00",NotesOF10);
+    printf("\n%d Note(s) of 5.00",NotesOF5);
+    printf("\n%d Note(s) of 2.00",NotesOF2);
+    printf("\n%d Note(s) of 1.00",NotesOF1);
+
+
+
+
+}
+

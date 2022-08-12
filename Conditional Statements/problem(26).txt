@@ -1,0 +1,39 @@
+| PROBLEM | :
+Write a program in C which is a Menu-Driven Program to perform a simple calculation.
+Test Data :
+10
+2
+3
+Expected Output :
+The Multiplication of 10 and 2 is: 20
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:10
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){     int x,y,n;
+        printf("Input 1st no: ");scanf("%d",&x);
+        printf("Input 2nd no: ");scanf("%d",&y);
+        printf("1-add | 2-subtract | 3-multiply | 4-divide");
+        printf("\nInput operation no: ");scanf("%d",&n);
+
+        switch(n){
+    case 1: printf("The Addition of %d and %d is: %d",x,y,x+y);break;
+    case 2: printf("The Subtraction of %d and %d is: %d",x,y,x-y);break;
+    case 3: printf("The Multiplication of %d and %d is: %d",x,y,x*y);break;
+    case 4: printf("The Division of %d and %d is: %d",x,y,x/y);break;
+    default: printf("\ninvalid op num!");
+
+        }
+
+
+}

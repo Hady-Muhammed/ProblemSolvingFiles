@@ -1,0 +1,52 @@
+| PROBLEM | :
+
+Write a program in C to read the file and store the lines into an array.
+Test Data :
+Input the file name to be opened : test.txt
+Expected Output :
+
+ The content of the file test.txt  are :                                                                      
+ test line 1                                                                                                  
+ test line 2                                                                                                  
+ test line 3                                                                                                  
+ test line 4
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 8:32
+
+ Did i checked the question answer? = YES
+
+ Learned that!
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+            char f[50];
+            char str[n][max];
+            FILE *fptr; 
+        printf("Input the file name to be opened : ");scanf("%s",f);
+        if((fptr = fopen(f,"r")) == NULL){
+                printf("File cannot be opened!");
+           }
+        else{       int i = 0;
+                while( fgets(str[i],10,fptr) != NULL){
+
+                    i++;
+                }
+                
+           printf("\n The content of the file %s  are : \n",f);
+    for(j = 0; j < i; ++i)
+    {
+        printf("%s\n", str[j]);
+    }
+    printf("\n");
+           }
+
+        
+
+}

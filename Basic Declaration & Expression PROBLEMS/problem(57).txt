@@ -1,0 +1,45 @@
+| PROBLEM | :
+
+Write a C program to reverse and print a given number. 
+Input a number:
+The original number = 234
+The reverse of the said number = 432
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 18:34
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+
+int main(){ int x,n,digits,y;
+    printf("Input how many digits in the number: ");scanf("%d",&digits);
+    printf("Input a number: ");scanf("%d",&x);
+    y=digits;
+   int a[y];
+
+     printf("\nThe original number = %d",x);
+
+    int i=0;
+   while(x > 0){
+    n = x % 10;
+        x/=10 ;
+       a[i] = n;
+       i++;
+   }
+
+    printf("\nThe reversed number = ");
+    for(int j = 0 ; j < y ; j++){
+        printf("%d",a[j]);
+    }
+
+}

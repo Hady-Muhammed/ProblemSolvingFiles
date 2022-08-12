@@ -1,0 +1,42 @@
+| PROBLEM | :
+
+Write a c program to find out the sum of an A.P. series. 
+Test Data :
+Input the starting number of the A.P. series: 1
+Input the number of items for the A.P. series: 10
+Input the common difference of A.P. series: 4
+Expected Output :
+The Sum of the A.P. series are :
+1 + 5 + 9 + 13 + 17 + 21 + 25 + 29 + 33 + 37 = 190
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:24
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x,y,z;
+            int sum=0;
+    printf("Input the starting number of the A.P. series: ");scanf("%d",&x);
+    printf("Input the number of items for the A.P. series: ");scanf("%d",&y);
+    printf("Input the common difference of A.P. series: ");scanf("%d",&z);
+    printf("\n\nThe Sum of the A.P. series are :\n");
+    for(int i = 1 , j = 1 ; i <= 10 ; i++ , j+=4){
+        printf(" %d ",j);
+        sum+=j;
+        if(i==10){
+                printf("= %d",sum);
+        }else{
+            printf("+");
+        }
+    }
+
+}

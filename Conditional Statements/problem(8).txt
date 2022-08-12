@@ -1,0 +1,30 @@
+| PROBLEM | :
+
+Write a C program to find the largest of three numbers. 
+Test Data : 12 25 52
+Expected Output :
+1st Number = 12,        2nd Number = 25,        3rd Number = 52
+The 3rd Number is the greatest among three
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:02
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){     int x,y,z;
+    scanf("%d%d%d",&x,&y,&z);
+    if(x > y && x > z)
+        printf("The 1st Number is the greatest among three.");
+    else if( y > x && y > z)
+        printf("The 2nd Number is the greatest among three.");
+    else
+        printf("The 3rd Number is the greatest among three.");
+}

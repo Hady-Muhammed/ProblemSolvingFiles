@@ -1,0 +1,50 @@
+| PROBLEM | :
+
+Write a program in C to find the sum of the series [ 1-X^2/2!+X^4/4!- .........]. 
+Test Data :
+Input the Value of x :2
+Input the number of terms : 5
+Expected Output :
+the sum = -0.415873
+Number of terms = 5
+value of x = 2.000000
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 27:53
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+#include <math.h>
+
+int fact(int x){
+ int fact=1;
+    for(int i = 1 ; i <= x ; i++){
+        fact*=i;
+    }
+    return fact;
+}
+
+int main(){ int x,n;
+            int y=0;
+            float sum=0.0;
+    printf("Input the Value of x : "); scanf("%d",&x);
+    printf("\nInput the number of terms : ");scanf("%d",&n);
+    for(int i = 1 ; i <= n ; i++ , y+=2){
+        if(i%2==0){
+            sum-=(float)pow(x,y)/fact(y);
+        }else if(i%2==1){
+            sum+=(float)pow(x,y)/fact(y);
+        }
+
+    }
+    printf("\n\nthe sum = %f",sum);
+    printf("\nNumber of terms = %d",n);
+    printf("\nValue of x = %d",x);
+}

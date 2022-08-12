@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a C program to check whether two numbers in a pair is in ascending order or descending order. 
+Test Data :
+Input a pair of numbers (for example 10,2 : 2,10):
+Input first number of the pair: 10
+Expected Output:
+Input second number of the pair: 2
+The pair is in descending order!
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:34
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+
+int main(){
+    int x,y;
+printf("Input a pair of number(for example 10,2): \n");
+printf("Input first number of the pair: ");scanf("%d",&x);
+printf("Input second number of the pair: ");scanf("%d",&y);
+
+if(x>y)
+    printf("\nthe pair is in descending order!");
+else
+    printf("\nthe pair is in ascending order!");
+
+}
+
+

@@ -1,0 +1,48 @@
+| PROBLEM | :
+
+Write a C program that reads an array (length 10), and replace the first element of the array by a give number and replace each subsequent position of the array by one-third value of the previous. 
+Sample Output:
+
+Input a number:
+35
+
+Array elements:
+array_nums[0] = 35.0000
+array_nums[1] = 11.6667
+array_nums[2] = 3.8889
+array_nums[3] = 1.2963
+array_nums[4] = 0.4321
+array_nums[5] = 0.1440
+array_nums[6] = 0.0480
+array_nums[7] = 0.0160
+array_nums[8] = 0.0053
+array_nums[9] = 0.0018
+
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:19
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        float a[10];
+        printf("Input a number:\n");
+        scanf("%f",&a[0]);
+        printf("Array elements:\n");
+        printf("array[0] = %f\n",a[0]);
+            for(int i = 1 ; i < 10 ; i++){
+                a[i]=a[i-1]*1/3;
+                printf("array[%d] = %.4f\n",i,a[i]);
+            }
+}
+

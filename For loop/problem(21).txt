@@ -1,0 +1,40 @@
+| PROBLEM | :
+
+Write a program in C to display the sum of the series [ 9 + 99 + 999 + 9999 ...]. 
+Test Data :
+Input the number or terms :5
+Expected Output :
+9 99 999 9999 99999
+The sum of the saries = 111105
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 11:59
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){ int n,x=9,sum=9,digit=9;
+
+printf("Input the number or terms : ");scanf("%d",&n);
+if(n==1){
+    printf("9");
+    sum=9;
+    printf("\nsum = %d",sum);
+}else{
+    printf("9 ");
+    for(int i = 2 ; i <= n ; i++){
+        x=x*10+digit;
+        sum+=x;
+        printf("%d ",x);
+    }
+    printf("\nsum = %d",sum);
+}
+}

@@ -1,0 +1,60 @@
+| PROBLEM | :
+
+Write a C program that read 5 numbers and counts the number of positive numbers and negative numbers. 
+Test Data :
+Input the first number: 5
+Input the second number: -4
+Input the third number: 10
+Input the fourth number: 15
+Input the fifth number: -1
+Expected Output:
+Number of positive numbers: 3
+Number of negative numbers: 2
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:02
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+int n1,n2,n3,n4,n5;
+int positive=0,negative=0;
+    printf("Input the first number: ");scanf("%d",&n1);
+    if(n1 > 0)
+        positive++;
+    else
+        negative++;
+    printf("\nInput the second number: ");scanf("%d",&n2);
+    if(n2 > 0)
+        positive++;
+    else
+        negative++;
+    printf("\nInput the third number: ");scanf("%d",&n3);
+    if(n3 > 0)
+        positive++;
+    else
+        negative++;
+
+    printf("\nInput the second number: ");scanf("%d",&n4);
+    if(n4 > 0)
+        positive++;
+    else
+        negative++;
+
+    printf("\nInput the second number: ");scanf("%d",&n5);
+    if(n5 > 0)
+        positive++;
+    else
+        negative++;
+
+    printf("\n\nNumber of positive numbers : %d",positive);
+    printf("\nNumber of negative numbers : %d",negative);
+}

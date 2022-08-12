@@ -1,0 +1,81 @@
+| PROBLEM | :
+
+ Write a program in C to append multiple lines at the end of a text file. 
+
+Assume that the content of the file test.txt is :                                                                       
+test line 1                                                                                                   
+test line 2                                                                                                   
+test line 3                                                                                                   
+test line 4                                                                                                   
+Test Data :
+Input the file name to be opened : test.txt
+Input the number of lines to be written : 3
+The lines are :
+test line 5
+test line 6
+test line 7
+Expected Output :
+
+The content of the file test.txt is  :                                                                       
+test line 1                                                                                                   
+test line 2                                                                                                   
+test line 3                                                                                                   
+test line 4                                                                                                   
+                                                                                                              
+test line 5                                                                                                   
+test line 6                                                                                                   
+test line 7
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:29
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+
+#include <stdio.h>
+
+int main(){     int n;
+            char line[50],f[50],ch;
+            FILE *fptr;
+            printf("Input the file name to be opened : ");scanf("%s",f);
+            printf("Input the number of lines to be written : ");scanf("%d",&n);
+            printf("\nThe lines are:\n");
+            for(int i = 1 ; i <= n ; i++){
+                scanf("%s",line);
+                if((fptr = fopen(f,"a")) == NULL)
+                    printf("File cannot be opened!");
+                else{
+                   fprintf(fptr,"\n%s\n",line);
+            }
+                fclose(fptr);
+                }
+
+
+
+            printf("The content of the file %s is :\n",f);
+        if((fptr = fopen(f,"r")) == NULL)
+           printf("File cannot be opened!");
+        else{
+
+            while((ch = fgetc(fptr))!=EOF){
+                fprintf(stdout,"%c",ch);
+            }
+            fclose(fptr);
+        }
+
+}
+
+
+
+
+
+
+
+
+

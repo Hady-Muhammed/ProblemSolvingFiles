@@ -1,0 +1,59 @@
+| PROBLEM | :
+
+ Write a C program to find the prime numbers which are less than or equal to a given integer. 
+Input:
+n (1 <= n <= 999,999)
+Sample Output:
+
+Input a number:
+123
+Number of prime numbers which are less than or equal to 123
+30
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 13:58
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+
+
+int PrimeOrNot(int x){
+int count = 0;
+    for(int i = 2 ; i <= x ; i++){
+        if(x%i==0){
+            count++;
+        }
+    }
+  if(count==1)
+            return 1;
+  else
+            return 0;
+
+
+}
+
+
+int main(){
+    int n;
+    int primes=0;
+    printf("Input a number:\n");scanf("%d",&n);
+
+    for(int i = n ; i >= 2 ; i--){
+    if(PrimeOrNot(i)){
+        primes++;
+    }
+    }
+    printf("\nNumber of prime numbers which are less than or equal to %d\n%d",n,primes);
+}
+
+

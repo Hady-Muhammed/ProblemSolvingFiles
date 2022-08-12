@@ -1,0 +1,43 @@
+| PROBLEM | :
+
+Write a c program to check whether a given number is a perfect number or not.
+Test Data :
+Input the number : 56
+Expected Output :
+The positive divisor : 1 2 4 7 8 14 28
+The sum of the divisor is : 64
+So, the number is not perfect.
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:24
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int n,sum=0;
+    printf("Input the number : ");scanf("%d",&n);
+    printf("\nThe positive divisor : ");
+    for(int i = 1 ; i < n ; i++){
+        if(n%i==0){
+            printf("%d ",i);
+            sum+=i;
+        }
+    }
+        printf("\nThe sum of the divisors are : %d\n",sum);
+
+    if(sum==n){
+        printf("\nSo, the number is perfect.");
+    }else{
+        printf("\nSo, the number is not perfect.");
+    }
+
+}

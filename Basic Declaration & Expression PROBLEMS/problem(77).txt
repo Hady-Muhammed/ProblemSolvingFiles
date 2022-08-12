@@ -1,0 +1,42 @@
+| PROBLEM | :
+
+Write a C program that accepts principal amount, rate of interest and days for a loan and calculate the simple interest for the loan, using the following formula. Go to the editor
+interest = principal * rate * days / 365.
+Sample Input:
+10000
+0.1
+365
+0
+Sample Output:
+Input loan amount (0 to quit): Input interest rate: Input term of the loan in days: The interest amount is $1000.00
+Input loan principal_amt (0 to quit)
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:58
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int amount,days;
+        float interest,rate;
+    printf("Input loan amount (0 to quit): ");scanf("%d",&amount);
+    if(amount==0)
+        return 0;
+    printf("\nInput interest rate: ");scanf("%f",&rate);
+
+    printf("\nInput term of the loan in days: ");scanf("%d",&days);
+
+    interest = (amount * rate * days) / 365.0;
+
+    printf("\n\nThe interest amount is $%f",interest);
+
+}

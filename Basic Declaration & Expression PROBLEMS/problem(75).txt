@@ -1,0 +1,33 @@
+| PROBLEM | :
+
+Write a C program that accepts one seven-digit number and separates the number into its individual digits, and prints the digits separated from one another by two spaces each. 
+Sample Input: 2345678
+Input a seven digit number:
+Output: 2 3 4 5 6 7 8
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:10
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int n,x[7];
+        printf("Input a seven digit number: ");scanf("%d",&n);
+
+        for(int i = 0 ; i < 7 ; i++){
+            x[i] = n%10;
+            n = n/10;
+        }
+
+    for(int j = 6 ; j >= 0 ; j--)
+        printf("%d  ",x[j]);
+
+
+}

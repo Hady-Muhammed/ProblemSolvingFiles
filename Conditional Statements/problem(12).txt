@@ -1,0 +1,54 @@
+| PROBLEM | :
+
+Write a C program to read roll no, name and marks of three subjects and calculate the total, percentage and division. 
+Test Data :
+Input the Roll Number of the student :784
+Input the Name of the Student :James
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+Expected Output :
+Roll No : 784
+Name of Student : James
+Marks in Physics : 70
+Marks in Chemistry : 80
+Marks in Computer Application : 90
+Total Marks = 240
+Percentage = 80.00
+Division = First
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 5:10
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int rollno,x,y,z,total;
+            char name[20];
+            float per;
+        printf("Input the Roll Number of the student : ");scanf("%d",&rollno);
+        printf("Input the Name of the Student : ");scanf("%s",name);
+        printf("\nInput the marks of Physics, Chemistry and Computer Application : ");scanf("%d%d%d",&x,&y,&z);
+        printf("\n\nRoll NO : %d",rollno);
+        printf("\nName of student : %s",name);
+        printf("\nMarks in Physics : %d",x);
+        printf("\nMarks in Chemistry : %d",y);
+        printf("\nMarks in Computer Application : %d",z);
+        total = x+y+z;
+        per = total/300.0;
+        printf("\n\nTotal Marks = %d",total);
+        printf("\nPercentage = %f%%",per*100);
+
+        if(total >= 200)
+            printf("\nDivision = First");
+        else if(total < 200 && total >= 100)
+            printf("\nDivision = Second");
+        else
+            printf("\nDivision = Third");
+
+}

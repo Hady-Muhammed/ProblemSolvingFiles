@@ -1,0 +1,35 @@
+| PROBLEM | :
+Write a C program to compute the perimeter and area of a circle with a given radius. 
+Expected Output:
+Perimeter of the Circle = 37.680000 inches
+Area of the Circle = 113.040001 square inches
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:19
+
+ Did i checked the question answer? = NO 
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+#define pi 3.14
+
+int main(){
+    float r;
+    float area,perim;
+
+    printf("Enter the radius:\n");
+    scanf("%f",&r);
+    area=2*pi*r;
+    perim=pi*r*r;
+    printf("Area: %f\n Perimeter: %f",area,perim);
+
+
+}
+
+
+

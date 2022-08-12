@@ -1,0 +1,66 @@
+| PROBLEM | :
+
+Write a program in C to copy a file in another name. 
+
+Assume that the content of the file test.txt is :                                                                       
+test line 1                                                                                                   
+test line 2                                                                                                   
+test line 3                                                                                                   
+test line 4                                                                                                   
+Test Data :
+Input the source file name : test.txt
+Input the new file name : test1.txt
+Expected Output :
+
+ The file test.txt  copied successfully in the file test1.txt.
+If you read the new file you will see the content of the file :
+
+test line 1                                                                                                   
+test line 2                                                                                                   
+test line 3                                                                                                   
+test line 4 
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 6:53
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){     char f[50],nf[50],ch;
+                FILE *fptr,*nfptr;
+            printf("Input the source file name : ");scanf("%s",f);
+            printf("Input the new file name : ");scanf("%s",nf);
+            if((fptr = fopen(f,"r")) == NULL)
+                printf("File cannot be opened!");
+            else{   nfptr = fopen(nf,"a+");
+                while((ch = fgetc(fptr)) != EOF){
+                    fputc(ch,nfptr);
+                }
+                fclose(nfptr);
+                printf("\nThe file %s  copied successfully in the file %s.",f,nf);
+
+                fclose(fptr);
+
+                nfptr = fopen(nf,"a+");
+                printf("\n\nIf you read the new file you will see the content of the file :\n");
+                while((ch = fgetc(nfptr)) != EOF){
+                    printf("%c",ch);
+                }
+                fclose(nfptr);
+            }
+
+
+}
+
+
+
+
+

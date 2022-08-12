@@ -1,0 +1,40 @@
+| PROBLEM | :
+Write a C program to check whether a given integer is positive even, negative even, positive odd or negative odd. Print even if the number is 0. 
+Test Data :
+Input an integer: 13
+Expected Output:
+Positive Odd
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:49
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+
+int main(){
+    int x;
+    printf("Input an integer: \n");
+    scanf("%d",&x);
+
+    if(x%2==0 && x > 0)
+            printf("\nPositive even");
+    else if(x%2==0 && x < 0)
+            printf("\nNegative even");
+    else if(x%2==1 && x > 0)
+            printf("\nPositive odd");
+    else if(x==0)
+            printf("\nEven");
+    else if(x%2==1 && x < 0)
+            printf("\nNegative odd");
+}
+
+
+

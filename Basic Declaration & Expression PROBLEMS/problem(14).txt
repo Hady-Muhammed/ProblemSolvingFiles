@@ -1,0 +1,37 @@
+| PROBLEM | :
+
+Write a C program to calculate a bike’s average consumption from the given total distance (integer value) traveled (in km) and spent fuel (in liters, float number – 2 decimal point). 
+Test Data :
+Input total distance in km: 350
+Input total fuel spent in liters: 5
+Expected Output:
+Average consumption (km/lt) 70.000
+ 
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:46
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+int fuel,distance;
+float avg;
+
+    printf("Input total distance in km : ");
+    scanf("%d",&distance);
+    printf("Input total fuel spent in liters : ");
+    scanf("%d",&fuel);
+    avg = distance / (float)fuel;
+    printf("Average consumption(km/lt): %f",avg);
+
+
+
+
+}

@@ -1,0 +1,25 @@
+| PROBLEM | :
+
+Write a C program to get the C version you are using. 
+Expected Output:
+C version : 201112
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 0:00
+
+ Did i checked the question answer? = YES
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+
+printf("C Version : %d", __STDC_VERSION__);
+
+}
+
+

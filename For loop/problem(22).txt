@@ -1,0 +1,49 @@
+| PROBLEM | :
+
+Write a program in C to print the Floyd's Triangle. 
+
+1 
+01
+101 
+0101 
+10101
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:48
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+
+    for(int i = 1 ; i <= 5 ; i++){
+        for(int j = 1 ; j <= i ; j++){
+                if(i%2==0){
+                        if(j%2==0){
+                        printf("1");
+                    }else{
+                        printf("0");
+            }
+
+                }else{
+            if(j%2==0){
+                printf("0");
+            }else{
+                printf("1");
+            }
+        }
+        }
+
+            printf("\n");
+    }
+
+}

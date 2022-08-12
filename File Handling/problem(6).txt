@@ -1,0 +1,49 @@
+| PROBLEM | :
+
+Write a program in C to find the content of the file and number of lines in a Text File. 
+Test Data :
+Input the filen ame to be opened : test.txt
+Expected Output :
+
+ The content of the file test.txt  are :                                                                      
+ test line 1                                                                                                  
+ test line 2                                                                                                  
+ test line 3                                                                                                  
+ test line 4                                                                                                  
+ The lines in the file are : 4
+
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 4:00
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int count = 0;
+            char ch,f[50];
+            FILE *fptr;
+        printf("Input the file name to be opened : ");scanf("%s",f);
+        if((fptr = fopen(f,"r")) == NULL){
+            printf("File cannot be opened!");
+        }
+        else{   printf("\n\nThe content of the file %s are :\n",f);
+            while((ch = fgetc(fptr))!=EOF){
+               if(ch == '\n')
+                    count++;
+                printf("%c",ch);
+            }
+            fclose(fptr);
+            printf("\nThe lines in the file are: %d",count+1);
+        }
+
+
+}

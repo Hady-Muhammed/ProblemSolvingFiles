@@ -1,0 +1,33 @@
+| PROBLEM | :
+
+Write a program in C to display n terms of natural number and their sum.
+Test Data : 7
+Expected Output :
+The first 7 natural number is :
+1 2 3 4 5 6 7
+The Sum of Natural Number upto 7 terms : 28
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:55
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){     int t,sum=0;
+        printf("Input no. of terms: ");scanf("%d",&t);
+        printf("\n\nThe first %d natural number is :\n",t);
+        for(int i = 1 ; i <= t ; i++){
+            printf("%d ",i);
+            sum+=i;
+        }
+        printf("\nThe Sum is: %d",sum);
+}
+

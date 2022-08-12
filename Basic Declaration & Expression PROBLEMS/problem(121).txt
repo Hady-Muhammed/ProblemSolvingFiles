@@ -1,0 +1,40 @@
+| PROBLEM | :
+
+Write a C program that reads an integer and find all the divisors of the said integer. 
+Sample Output:
+
+Input a number (integer value):
+35
+
+All positive divisors of 35
+1
+5
+7
+35
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 1:20
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int x;
+    printf("Input a number (integer value):");
+    scanf("%d",&x);
+    printf("\nAll positive divisors of %d\n",x);
+        for(int i = 1 ; i <= x ; i++){
+            if(x%i == 0 ){
+                printf("%d\n",i);
+            }
+        }
+}

@@ -1,0 +1,41 @@
+| PROBLEM | :
+
+Write a program in C to Find the Number of Lines in a Text File.
+Test Data :
+Input the file name to be opened : test.txt
+Expected Output :
+
+ The lines in the file test.txt are : 4 
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:41
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){     char f[50],ch;
+                int count = 0;
+                FILE *fptr;
+        printf("Input the file name to be opened : ");scanf("%s",f);
+
+        if((fptr = fopen(f,"r")) == NULL){
+            printf("File cannot be opened!");
+        }
+        else{
+            while((ch = fgetc(fptr)) != EOF){
+                if(ch == '\n')
+                    count++;
+            }
+           printf("\n\nThe lines in the file %s are : %d",f,count);
+           fclose(fptr);
+        }
+
+
+}
+

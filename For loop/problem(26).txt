@@ -1,0 +1,55 @@
+| PROBLEM | :
+
+Write a program in C to find the sum of the series 1 +11 + 111 + 1111 + .. n terms.
+Test Data :
+Input the number of terms : 5
+Expected Output :
+1 + 11 + 111 + 1111 + 11111
+The Sum is : 12345
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:50
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+
+#include <stdio.h>
+
+int main(){
+    int n,x=1,sum=1,digit=1;
+    printf("Input the number of terms : ");scanf("%d",&n);
+    if(n==1){
+    printf("1");
+    sum=1;
+    printf("\nsum = %d",sum);
+}else{
+    printf("1 ");
+    for(int i = 2 ; i <= n ; i++){
+        x=x*10+digit;
+        sum+=x;
+        printf("%d ",x);
+    }
+    printf("\nsum = %d",sum);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

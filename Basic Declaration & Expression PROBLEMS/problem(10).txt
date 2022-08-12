@@ -1,0 +1,37 @@
+| PROBLEM | :
+
+Write a C program that accepts two integers from the user and calculate the product of the two integers.
+Test Data :
+Input the first integer: 25
+Input the second integer: 15
+Expected Output:
+Product of the above two integers = 375
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:39
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+int num1,num2,product;
+
+printf("Enter two nums to calc their product!\n");
+scanf("%d",&num1);
+scanf("%d",&num2);
+product=num1*num2;
+
+printf("\n PRODUCT = %d",product);
+
+
+
+
+
+}

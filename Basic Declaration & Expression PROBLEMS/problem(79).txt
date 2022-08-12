@@ -1,0 +1,43 @@
+| PROBLEM | :
+
+Write a C program using looping to produce the following table of values. 
+Sample Output:
+
+x       x+2     x+4     x+6
+--------------------------------
+1       3       5       7
+4       6       8       10
+7       9       11      13
+10      12      14      16
+13      15      17      19
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 7:17
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int x = 1,y = 3;
+    printf("x       x+2     x+4     x+6\n--------------------------------\n");
+
+    for(int i = 1 ; i < 5 ; i++){
+            for(int j = 1 ; j < 5 ; j++){
+                    printf("%d\t",x);
+                    x+=2;
+
+            }
+            x = 1 + y;
+            y+=3;
+        printf("\n");
+    }
+
+}
+
+

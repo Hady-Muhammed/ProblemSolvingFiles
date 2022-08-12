@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a C program that read 5 numbers and sum of all odd values between them. 
+Test Data :
+Input the first number: 5
+Input the second number: 7
+Input the third number: 9
+Input the fourth number: 10
+Input the fifth number: 13
+Expected Output:
+Sum of all odd values: 34
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:27
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+    int a[5],sum=0;
+
+    for(int i = 0 ; i < 5 ; i++){
+        printf("Enter num #%d : ",i+1);
+        scanf("%d",&a[i]);
+        if(a[i]%2==1)
+            sum+=a[i];
+    }
+
+
+printf("Sum of all odd values: %d",sum);
+
+}

@@ -1,0 +1,46 @@
+| PROBLEM | :
+
+Write a C program that accepts two item’s weight (floating points' values ) and number of purchase (floating points' values) and calculate the average value of the items. 
+Test Data :
+Weight - Item1: 15
+No. of item1: 5
+Weight - Item2: 25
+No. of item2: 4
+Expected Output:
+Average Value = 19.444444
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 9:02
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | : 
+
+#include <stdio.h>
+
+int main(){
+    float avg,itemW[2],itemNo[2];
+    float x,y;
+
+
+
+    for(int i = 0 ; i < 2 ; i++){
+        printf("Weight - item%d :\n",i+1);scanf("%f",&itemW[i]);
+        printf("No. of item%d :\n",i+1);scanf("%f",&itemNo[i]);
+        printf("\n\n");
+    }
+    x = itemW[0]*itemNo[0]+itemW[1]*itemNo[1];
+    y = itemNo[0]+itemNo[1];
+    avg = x/y;
+
+    printf("Average Value = %f",avg);
+
+
+
+}

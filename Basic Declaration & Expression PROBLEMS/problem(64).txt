@@ -1,0 +1,67 @@
+| PROBLEM | :
+
+Write a C program that accepts integers from the user until a zero or a negative number, display the number of positive values, the minimum value, the maximum value and the average of all numbers. 
+Input a positive integer:
+Input next positive integer: 15
+Input next positive integer: 25
+Input next positive integer: 37
+Input next positive integer: 43
+Number of positive values entered is 4
+Maximum value entered is 43
+Minimum value entered is 15
+Average value is 30.0000
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 25:21
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){ int max,min,n,sum=0,values=0;
+            float avg;
+
+            printf("Input a positive integer: ");
+            scanf("%d",&n);
+              max = min = n;
+              if(n == 0 || n < 0){
+               printf("Program Ended!");
+               return 0;
+              }else{ sum+=n;
+                     values++;
+    do{
+            printf("Input a positive integer: ");
+            scanf("%d",&n);
+            if( n > 0 && n != 0){
+            sum+=n;
+            values++;
+
+            if(n > max)
+                max = n;
+            else if(n < min)
+                min = n;
+            }
+
+
+    }while(n > 0 && n != 0);
+
+
+   avg = (float)sum / values ;
+   printf("\nNumber of positive values entered is %d",values);
+   printf("\nMaximum value entered is %d",max);
+   printf("\nMinimum value entered is %d",min);
+   printf("\nAverage value is %f",avg);
+
+
+              }
+
+
+
+
+}

@@ -1,0 +1,45 @@
+| PROBLEM | :
+
+Write a C program that reads seven integer values from the user and find the highest value and it’s position. 
+Sample Output:
+Input 7 numbers (integer values):
+15
+20
+25
+17
+-8
+35
+
+Maximum value: 35
+Position: 6
+
+
+
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 2:33
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){
+        int a[7],max,pstion,i;
+    printf("Input 7 numbers (integer values): ");
+    scanf("%d",&a[0]);
+    max = a[0];
+    for(int i = 1 ; i < 7 ; i++){
+    scanf("%d",&a[i]);
+        if(a[i] > max){
+            max=a[i];
+            pstion=i+1;
+        }
+    }
+    printf("Maximum value: %d",max);
+    printf("\nPosition: %d",pstion);
+}

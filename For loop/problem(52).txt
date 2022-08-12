@@ -1,0 +1,38 @@
+| PROBLEM | :
+
+Write a program in c to find the Sum of GP series. 
+Test Data :
+Input the first number of the G.P. series: 3
+Input the number or terms in the G.P. series: 5
+Input the common ratio of G.P. series: 2
+Expected Output :
+The numbers for the G.P. series:
+3.000000 6.000000 12.000000 24.000000 48.000000
+The Sum of the G.P. series : 93.000000
+
+| Problem rating | :
+
+ Time taken for the logic thinking & implementing the code = 3:31
+
+ Did i checked the question answer? = NO
+
+
+
+| MY ANSWER (Source code) | :
+
+#include <stdio.h>
+
+int main(){     int x,y,z;
+                float sum=0;
+    printf("Input the first number of the G.P. series: ");scanf("%d",&x);
+    printf("Input the number or terms in the G.P. series: ");scanf("%d",&y);
+    printf("Input the common ratio of G.P. series: ");scanf("%d",&z);
+    printf("\n\nThe numbers for the G.P. series:\n");
+    for(int i = 1 ; i <= y ; i++){
+        printf("%f ",(float)x);
+        sum+=x;
+        x*=2;
+    }
+    printf("\nThe sum = %f",sum);
+
+}
