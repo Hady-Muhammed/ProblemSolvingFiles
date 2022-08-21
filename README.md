@@ -1,2 +1,2 @@
 # ProblemSolvingFiles
-Q&amp;A of problems i solved through my journey.
+Q&amp;A of problems i solved throughout my journey.
